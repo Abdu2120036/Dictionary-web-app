@@ -98,3 +98,7 @@ body {
     flex-direction: row;
     gap: 0.125rem;
 }
+
+.toggle.active .indicator {
+    left: 40px;
+}
