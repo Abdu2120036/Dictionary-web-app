@@ -19,6 +19,7 @@
     box-sizing: border-box;
     background-color: var(--white-color);
     font-family: Merriweather;
+    color: var(--black-color)
 }
 
 body {
@@ -32,13 +33,12 @@ body {
     width: 700px;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 2rem 1rem;
 }
 
 
 
 /* Section-1 style */
-
 .toggle {
     transition: 0.5s;
     display: block;
@@ -71,7 +71,7 @@ body {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    height: 30px;
+    height: 40px;
     padding: 0.2rem 0;
     margin-bottom: 0.5rem;
 }
@@ -100,5 +100,24 @@ body {
 }
 
 .toggle.active .indicator {
-    left: 40px;
+    left: 50%;
+}
+
+
+
+/* Search Bar style */
+.search-bar {
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+input {
+    color: var(--black-color);
+    background-color: gray;
+    opacity: 0.4;
+    width: 100%;
+    height: 2rem;
+    border-radius: 1rem;
+    border: 0;
+    padding: 1rem;
 }
