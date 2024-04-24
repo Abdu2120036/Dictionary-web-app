@@ -121,3 +121,48 @@ input {
     border: 0;
     padding: 1rem;
 }
+
+
+
+/* Section-2 style */
+.sect-2 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+
+.sect-2 div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sect-2 button {
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+    margin: 0.7rem;
+}
+
+button img {
+    width: 45px;
+}
+
+
+
+
+/* Section-3 Noun */
+.sect-3-noun {
+    display: flex;
+    flex-direction: column;
+}
+
+.sect-3-noun div:nth-child(1) {
+    display: flex;
+    flex-direction: row;
+}
+
+.sect-3-noun hr {
+    width: 100%;
+}
