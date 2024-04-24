@@ -18,4 +18,5 @@ bg-img: linear-gradient(-60deg, #ff4e50 50%, #f9d423 50%);
  Couldn't change the background of the book icon to suit the background color of the website.
 
  Couldn't change the color of the font in the input tag.
- 
+
+ The line cutting the noun needs to be fixed. (Continue from this).
