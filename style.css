@@ -153,16 +153,23 @@ button img {
 
 
 /* Section-3 Noun */
-.sect-3-noun {
+.sect-3-noun, .sect-4-verb {
     display: flex;
     flex-direction: column;
 }
 
-.sect-3-noun div:nth-child(1) {
+.sect-3-noun div:nth-child(1), .sect-4-verb div:nth-child(1){
     display: flex;
     flex-direction: row;
 }
 
-.sect-3-noun hr {
+.cut div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem
+}
+
+.sect-3-noun .cut div hr {
     width: 100%;
 }
