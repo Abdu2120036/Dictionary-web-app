@@ -129,13 +129,17 @@ input {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .sect-2 div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.left-name p {
+    color: #0080ff;
 }
 
 .sect-2 button {
@@ -153,17 +157,19 @@ button img {
 
 
 /* Section-3 Noun */
-.sect-3-noun, .sect-4-verb {
+.sect-3-noun {
     display: flex;
     flex-direction: column;
+    font-size: small;
 }
 
-.sect-3-noun div:nth-child(1), .sect-4-verb div:nth-child(1){
+.sect-3-noun div:nth-child(1) {
     display: flex;
     flex-direction: row;
+    margin-bottom: 0.7rem;
 }
 
-.cut div {
+.sect-3-noun .cut div {
     width: 100%;
     display: flex;
     align-items: center;
@@ -173,3 +179,26 @@ button img {
 .sect-3-noun .cut div hr {
     width: 100%;
 }
+
+.noun {
+    font-weight: bold;
+}
+
+.title {
+    color: rgba(0, 128, 0, 0.5);
+    margin-bottom: 0.5rem;
+}
+
+.sect-3-noun div:nth-child(3), 
+.sect-3-noun div:nth-child(4) {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 0.5rem;
+}
+
+.antonyms-text,
+.synonyms-text {
+    color: #0080ff;
+}
+
