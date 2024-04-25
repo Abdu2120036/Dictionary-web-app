@@ -19,3 +19,5 @@ bg-img: linear-gradient(-60deg, #ff4e50 50%, #f9d423 50%);
 
  Couldn't change the color of the font in the input tag.
 
+### Prefrences 
+Reflect the moon icon.
