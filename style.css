@@ -1,5 +1,5 @@
 :root {
-    --white-color: #f2e3e3;
+    --white-color: #ffffff;
     --black-color: #212121;
     --tertiary-color:rgb(187, 74, 29);
     --bt-color:#e3cbf5;
@@ -163,20 +163,20 @@ button img {
     font-size: small;
 }
 
-.sect-3-noun div:nth-child(1) {
+.sect-3-noun .cut {
     display: flex;
     flex-direction: row;
     margin-bottom: 0.7rem;
 }
 
-.sect-3-noun .cut div {
+.cut div {
     width: 100%;
     display: flex;
     align-items: center;
     padding: 0.5rem
 }
 
-.sect-3-noun .cut div hr {
+.cut div hr {
     width: 100%;
 }
 
@@ -184,13 +184,22 @@ button img {
     font-weight: bold;
 }
 
+
+/* Applies to all */
 .title {
     color: rgba(0, 128, 0, 0.5);
     margin-bottom: 0.5rem;
 }
 
+.meaning-text {
+    margin: 0 0 0.7rem 0;
+}
+
 .sect-3-noun div:nth-child(3), 
-.sect-3-noun div:nth-child(4) {
+.sect-3-noun div:nth-child(4),
+.sect-4-verb div:nth-child(3),
+.sect-4-verb div:nth-child(4)
+{
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -202,3 +211,19 @@ button img {
     color: #0080ff;
 }
 
+
+
+/* Section-4 Verb */
+.sect-4-verb {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 0 1rem 0;
+    font-size: small;
+}
+
+.sect-4-verb .cut {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.7rem;
+    font-weight: bold;
+}
