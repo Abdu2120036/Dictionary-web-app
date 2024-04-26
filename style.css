@@ -227,3 +227,18 @@ button img {
     margin-bottom: 0.7rem;
     font-weight: bold;
 }
+
+
+/* Ending Style  */
+.ending {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: smaller;
+}
+
+.ending .title {
+    margin: 0;
+    text-decoration: underline;
+} 
