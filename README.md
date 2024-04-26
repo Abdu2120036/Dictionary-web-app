@@ -15,9 +15,9 @@ bg-img: linear-gradient(-60deg, #ff4e50 50%, #f9d423 50%);
 
 ### Issues
  
- Couldn't change the background of the book icon to suit the background color of the website.
+ Couldn't change the background of the book icon to suit the background color of the website. (Fixed it, just changed the image to one that can change.)
 
  Couldn't change the color of the font in the input tag.
 
 ### Prefrences 
-Reflect the moon icon.
+Reflect the moon icon. (Done)
