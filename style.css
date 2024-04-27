@@ -1,6 +1,6 @@
 :root {
     --white-color: #ffffff;
-    --black-color: #212121;
+    --black-color: #000000;
     --tertiary-color:rgb(187, 74, 29);
     --bt-color:#e3cbf5;
     --bt-hov: rgb(248, 160, 248);
@@ -17,15 +17,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: var(--white-color);
     font-family: Merriweather;
-    color: var(--black-color)
 }
 
 body {
     display: flex;
     justify-content: center;
     min-height: 100vh;
+    background-color: var(--white-color);
+    color: var(--black-color);
 }
 
 .container {
@@ -56,8 +56,6 @@ body {
 
 .toggle .indicator {
     position: absolute;
-    top: 1;
-    left: 1;
     width: 20px;
     height: 20px;
     padding: 0.125rem;
@@ -152,6 +150,7 @@ input {
     border: 0;
     cursor: pointer;
     margin: 0.7rem;
+    background-color: var(--white-color);
 }
 
 button img {
@@ -251,3 +250,21 @@ button img {
 
 
 /* Dark Mode  */
+.dark-mode-all {
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+.toggle-dark {
+    background-color: #0080ff;
+}
+
+.indicator-dark {
+    background-color: var(--white-color) !important;
+}
+
+.dark {
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
