@@ -1,6 +1,8 @@
 # Dictionary-web-app
 This project will take some time, however I will have only 2 weeks to finish this project. So 
 
+Done with the light mode. Done with the dark mode.
+
 ## Style contents
 
 ### Colors
