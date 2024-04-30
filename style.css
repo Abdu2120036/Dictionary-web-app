@@ -26,6 +26,7 @@ body {
     min-height: 100vh;
     background-color: var(--white-color);
     color: var(--black-color);
+    transition: 0.5s;
 }
 
 .container {
@@ -240,6 +241,7 @@ button img {
     flex-direction: column;
     gap: 0.25rem;
     font-size: smaller;
+    transition: 1s;
 }
 
 .ending .title {
@@ -264,7 +266,7 @@ button img {
 }
 
 .dark {
-    background-color: var(--black-color);
+    background-color: var(--black-color) !important;
     color: var(--white-color);
 }
 
