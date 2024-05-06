@@ -2,6 +2,7 @@ const toggleBtn = document.querySelector(".toggle");
 const indicator = document.querySelector(".indicator");
 const body = document.querySelector("body");
 
+const dictionaryIcon = document.querySelector('.dictionary-icon');
 const searchInput = document.getElementById('searchBar');
 
 const word = document.getElementById('word');
@@ -18,7 +19,7 @@ const synonymsVerb = document.querySelector('.sect-4-verb .synonyms-text');
 
 const link = document.querySelector(".link");
 
-const url = 'https://api.dictionaryapi.dev/api/v2/entries/en/<word>'
+const url = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 
 
 
@@ -30,3 +31,32 @@ toggleBtn.addEventListener("click", () => {
     link.classList.toggle('dark');
     body.classList.toggle('dark-mode-all');
 });
+
+searchInput.addEventListener('keypress', (e) => {
+    if(e.key == 'Enter') {
+        let inpWord = searchInput.value;
+        fetch(`${url}${inpWord}`)
+            .then((response) => response.json())
+            .then((data) => {
+                let info = data[0];
+                console.log(info);
+            })
+    }
+})
+
+dictionaryIcon.addEventListener('click', () => {
+    let inpWord = searchInput.value;
+    fetch(`${url}${inpWord}`)
+        .then((response) => response.json())
+        .then((data) => {
+            let info = data[0];
+            word.innerHTML = info.word;
+            phonic.innerHTML = info.phonetics[1].text;
+            
+            playBtn.setAttribute('src', `${info.phonetics[2].audio}`);
+        })
+})
+
+playBtn.addEventListener('click', () => {
+
+})
