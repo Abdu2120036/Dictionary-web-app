@@ -1,8 +1,8 @@
 # Dictionary-web-app
 This project will take some time, however I will have only 2 weeks to finish this project. So 
 
-Done with the light mode. Done with the dark mode.
-
+Finish the website. Still need to add the rest of the difinition and add the final touches regarding the aesthetics of the dictionary. 
+Good Luck
 ## Style contents
 
 ### Colors
