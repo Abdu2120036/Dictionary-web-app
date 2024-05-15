@@ -53,10 +53,10 @@ dictionaryIcon.addEventListener('click', () => {
             word.innerHTML = info.word;
             phonic.innerHTML = info.phonetics[1].text;
             
-            playBtn.setAttribute('src', `${info.phonetics[2].audio}`);
+            let phoneticsAudio = info.phonetics[1].audio;
+            playBtn.addEventListener('click', () {
+                phoneticsAudio.play();
+            })
+            
         })
-})
-
-playBtn.addEventListener('click', () => {
-
 })
