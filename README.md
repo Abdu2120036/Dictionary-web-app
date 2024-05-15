@@ -2,7 +2,9 @@
 This project will take some time, however I will have only 2 weeks to finish this project. So 
 
 Finish the website. Still need to add the rest of the difinition and add the final touches regarding the aesthetics of the dictionary. 
-Good Luck
+
+I need to remove the noun and verb sections, because the words entered in the search bar might not a verb or a noun. I need to have it automated to check whether the word is a verb, noun, adjective or adverb and display the info correctly.
+
 ## Style contents
 
 ### Colors
