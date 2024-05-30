@@ -54,7 +54,7 @@ dictionaryIcon.addEventListener('click', () => {
             phonic.innerHTML = info.phonetics[1].text;
             
             let phoneticsAudio = info.phonetics[1].audio;
-            playBtn.addEventListener('click', () {
+            playBtn.addEventListener('click', () => {
                 phoneticsAudio.play();
             })
             

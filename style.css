@@ -37,7 +37,9 @@ body {
     padding: 2rem 1rem;
 }
 
-
+.hidden {
+    display: none !important;
+}
 
 /* Section-1 style */
 .toggle {
