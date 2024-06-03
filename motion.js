@@ -1,6 +1,8 @@
 const toggleBtn = document.querySelector(".toggle");
 const indicator = document.querySelector(".indicator");
 const body = document.querySelector("body");
+const sect3Noun = document.querySelector('.sect-3-noun');
+const sect4Verb = document.querySelector('.sect-4-verb');
 
 const dictionaryIcon = document.querySelector('.dictionary-icon');
 const searchInput = document.getElementById('searchBar');
@@ -39,7 +41,21 @@ searchInput.addEventListener('keypress', (e) => {
             .then((response) => response.json())
             .then((data) => {
                 let info = data[0];
-                console.log(info);
+                let meanings = info.meanings;
+
+                meanings.forEach((i) => {
+                    if (i.partOfSpeech == 'noun') {
+                        meaningVerb.innerHTML = i.definitions[0];
+                        antonymsNoun.innerHtml = //
+                        
+                    }
+                    if (i.partOfSpeech == 'verb') {
+                        console.log('verb');
+                    }
+
+                })
+
+                console.log(info, meanings);
             })
     }
 })
@@ -50,6 +66,10 @@ dictionaryIcon.addEventListener('click', () => {
         .then((response) => response.json())
         .then((data) => {
             let info = data[0];
+            let meanings = info.meanings;
+
+            
+
             word.innerHTML = info.word;
             phonic.innerHTML = info.phonetics[1].text;
             
@@ -58,5 +78,6 @@ dictionaryIcon.addEventListener('click', () => {
                 phoneticsAudio.play();
             })
             
+
         })
 })
