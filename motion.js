@@ -45,12 +45,23 @@ searchInput.addEventListener('keypress', (e) => {
 
                 meanings.forEach((i) => {
                     if (i.partOfSpeech == 'noun') {
-                        meaningVerb.innerHTML = i.definitions[0];
-                        antonymsNoun.innerHtml = //
-                        
+                        let def = i.definitions;
+
+                        sect3Noun.classList.remove('hidden');
+
+                        meaningNoun.innerHTML = def[0].definition + `<br> OR <br>` + def[1].definition;
+                        antonymsNoun.innerHTML = i.antonyms;
+                        synonymsNoun.innerHTML = i.synonyms;
+
                     }
                     if (i.partOfSpeech == 'verb') {
-                        console.log('verb');
+                        let def = i.definitions;
+
+                        sect4Verb.classList.remove('hidden');
+
+                        meaningVerb.innerHTML = def[0].definition;
+                        antonymsVerb.innerHTML = i.antonyms;
+                        synonymsVerb.innerHTML = i.synonyms;
                     }
 
                 })
