@@ -3,6 +3,7 @@ const indicator = document.querySelector(".indicator");
 const body = document.querySelector("body");
 const sect3Noun = document.querySelector('.sect-3-noun');
 const sect4Verb = document.querySelector('.sect-4-verb');
+const end = document.querySelector('.ending');
 
 const dictionaryIcon = document.querySelector('.dictionary-icon');
 const searchInput = document.getElementById('searchBar');
@@ -42,6 +43,7 @@ searchInput.addEventListener('keypress', (e) => {
             .then((data) => {
                 let info = data[0];
                 let meanings = info.meanings;
+                let source = info.sourceUrls;
 
                 meanings.forEach((i) => {
                     if (i.partOfSpeech == 'noun') {
@@ -52,7 +54,6 @@ searchInput.addEventListener('keypress', (e) => {
                         meaningNoun.innerHTML = def[0].definition + `<br> OR <br>` + def[1].definition;
                         antonymsNoun.innerHTML = i.antonyms;
                         synonymsNoun.innerHTML = i.synonyms;
-
                     }
                     if (i.partOfSpeech == 'verb') {
                         let def = i.definitions;
@@ -64,7 +65,11 @@ searchInput.addEventListener('keypress', (e) => {
                         synonymsVerb.innerHTML = i.synonyms;
                     }
 
+                    end.classList.remove('hidden');
+                    link.innerHTML = source;
                 })
+
+
 
                 console.log(info, meanings);
             })
