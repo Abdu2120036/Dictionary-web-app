@@ -4,6 +4,7 @@ const body = document.querySelector("body");
 const sect3Noun = document.querySelector('.sect-3-noun');
 const sect4Verb = document.querySelector('.sect-4-verb');
 const end = document.querySelector('.ending');
+const sect2 = document.querySelector('.sect-2');
 
 const dictionaryIcon = document.querySelector('.dictionary-icon');
 const searchInput = document.getElementById('searchBar');
@@ -44,6 +45,7 @@ searchInput.addEventListener('keypress', (e) => {
                 let info = data[0];
                 let meanings = info.meanings;
                 let source = info.sourceUrls;
+                let phoneticsAudio = new Audio(info.phonetics[1].audio);
 
                 meanings.forEach((i) => {
                     if (i.partOfSpeech == 'noun') {
@@ -51,7 +53,7 @@ searchInput.addEventListener('keypress', (e) => {
 
                         sect3Noun.classList.remove('hidden');
 
-                        meaningNoun.innerHTML = def[0].definition + `<br> OR <br>` + def[1].definition;
+                        meaningNoun.innerHTML = def[0].definition;
                         antonymsNoun.innerHTML = i.antonyms;
                         synonymsNoun.innerHTML = i.synonyms;
                     }
@@ -67,6 +69,14 @@ searchInput.addEventListener('keypress', (e) => {
 
                     end.classList.remove('hidden');
                     link.innerHTML = source;
+                    
+                    word.innerHTML = info.word;
+                    phonic.innerHTML = info.phonetics[1].text;
+                    sect2.classList.remove('hidden');
+
+                    // playBtn.addEventListener('click', () => {
+                    //     phoneticsAudio.play();
+                    // })
                 })
 
 
@@ -86,13 +96,8 @@ dictionaryIcon.addEventListener('click', () => {
 
             
 
-            word.innerHTML = info.word;
-            phonic.innerHTML = info.phonetics[1].text;
+           
             
-            let phoneticsAudio = info.phonetics[1].audio;
-            playBtn.addEventListener('click', () => {
-                phoneticsAudio.play();
-            })
             
 
         })
